@@ -20,7 +20,7 @@ export const About = styled.article`
          width: 30vw;
       }
       p{
-         height: 20vw;
+         /* height: 20vw; */
          padding:auto 0;
          padding-bottom:5vw;
          margin-left: 30px;
@@ -30,4 +30,30 @@ export const About = styled.article`
          color:${props => props.theme.colors.blue.dark};
       }
    }
+   @media (max-width:950px) {
+      section{
+      margin: 0 5vw;
+      img{
+        min-width:250px;
+      }
+      p{
+         margin-left: 10px;
+         font-size: 20px;
+      }
+   }
+   @media (max-width:720px) {
+      section{
+      p{
+         font-size: 15px;
+      }
+   }
+}
+   @media (max-width:720px) {
+      section{
+         img{
+            display:none;
+         }
+   }
+}
+}
 `

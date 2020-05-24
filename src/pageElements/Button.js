@@ -14,6 +14,10 @@ cursor:pointer;
 &:hover{
    background-color:${props => props.theme.colors.blue.normal};
 }
+@media (max-width:720px) {
+   font-size:10px;
+padding: 5px 20px;
+}
 `
 const Button = ({ content }) => {
    return (

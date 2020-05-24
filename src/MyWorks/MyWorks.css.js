@@ -71,6 +71,11 @@ section{
          height:15.4vw; 
          opacity:1;
          transition:.5s ;
+         position:relative;
+         top:50%;
+         transform:translate(0,-50%);
+         min-width:100%;
+         min-height:100%;
       }
    }
    div:hover{
@@ -84,5 +89,24 @@ section{
          
       }
    }
+}
+@media (max-width:1024px) {
+   section{
+   div{
+      min-width:270px;
+      min-height:141px;
+      margin: 2vw 2vw;
+      div{
+         p{
+            font-size:18px;
+         }
+         button{
+            font-size:15px;
+            width:auto;
+            padding: 10px 15px;
+         }
+      }
+   }
+}
 }
 `

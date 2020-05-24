@@ -17,13 +17,14 @@ section{
    position: relative;
    div{
       display:flex;
+      flex-wrap:wrap;
       justify-content:center;
       div{
          border-radius:50%;
          width:calc(70px + 5vw);
          height:calc(70px + 5vw);
          position:relative;
-         margin: 0 1vw;
+         margin: 1vw 1vw;
          box-shadow: 0px 0px 29px -9px ${props => props.theme.colors.blue.dark};
          i{
             position:absolute;
@@ -60,10 +61,24 @@ section{
    img{
       position:relative;
       width: 30vw;
+      min-width:220px;
       left:50%;
       transform:translate(-50%,0);
    }
 
 
+}
+@media (max-width:840px) {
+   section{
+      div{
+         div{
+            width:calc(50px + 5vw);
+            height:calc(50px + 5vw);
+            i{
+            font-size:calc(30px + 3vw);
+         }
+         }
+      }
+   }
 }
 `

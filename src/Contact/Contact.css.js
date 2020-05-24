@@ -14,8 +14,18 @@ header{
 section{
    display:flex;
    flex-direction:row;
+   justify-content:center;
    img{
       width:30vw;
    }
 }
+   @media (max-width:700px) {
+   margin: 5vw 3vw;
+   section{
+      img{
+         display:none;
+      }
+   }
+}
+
 `

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 export const FormPanel = styled.div`
-width:50vw;
+width:auto;
+flex:1;
 position: relative;
 right:0;
 form{
@@ -19,10 +20,13 @@ form{
    input:nth-of-type(1){
       height:30px;
       margin-bottom:15px;
+      min-width:300px;
    }
    textarea{
       padding:10px 10px;
       height:calc(24vw - 110px);
+      min-height:130px;
+      min-width:300px;
       margin-bottom:15px;
       resize:none;
    }

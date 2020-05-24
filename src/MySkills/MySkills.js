@@ -15,7 +15,7 @@ const icons = [
    {
       color: '#f0db4f',
       class: 'fab fa-js-square',
-      description: 'JavaScript'
+      description: 'Java- Script'
    },
    {
       color: '#F16529',

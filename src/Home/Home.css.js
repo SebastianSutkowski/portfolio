@@ -35,4 +35,33 @@ section:nth-child(2){
       width:80%;
    }
 }
+@media (max-width:1024px) {
+   section:nth-child(1){
+   margin-left: 5vw;
+   }
+}
+@media (max-width:720px) {
+   section:nth-child(1){
+   margin-top: 40vh;
+   margin-left: 5vw;
+   h1{
+      font-size: 25px;
+   }
+   h2{
+      font-size: 20px;
+   }
+   h3{
+      font-size: 15px;
+   }
+   }
+   section:nth-child(2){
+   img{
+      position:absolute;
+      bottom:5vh;
+      right:5vw;
+      width:40vw;
+      min-width:220px;
+   }
+}
+}
 `
