@@ -31,12 +31,28 @@ section{
             left:50%;
             transform:translate(-50%,-50%);
             font-size:calc(50px + 3vw);
-            transition:.3s;
+            transition:.2s;
+         }
+         p{
+            display:block;
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%) scaleX(0);
+            font-size:20px;
+            transition:.15s;
+            color:${props => props.theme.colors.blue.dark};
+            font-weight:600;
+            text-align:center;
          }
       }
       div:hover{
          i{
             transform:translate(-50%,-50%) scaleX(0);
+         }
+         p{
+            transition-delay: .2s;
+            transform:translate(-50%,-50%) scaleX(1);
          }
       }
       

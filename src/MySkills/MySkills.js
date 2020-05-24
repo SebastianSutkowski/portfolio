@@ -5,32 +5,32 @@ const icons = [
    {
       color: '#f34f29',
       class: 'fab fa-git-alt',
-      description: 'git'
+      description: 'Git'
    },
    {
       color: '#61dbfb',
       class: 'fab fa-react',
-      description: 'git'
+      description: 'React'
    },
    {
       color: '#f0db4f',
       class: 'fab fa-js-square',
-      description: 'git'
+      description: 'JavaScript'
    },
    {
       color: '#F16529',
       class: 'fab fa-html5',
-      description: 'git'
+      description: 'HTML'
    },
    {
       color: '#264de4',
       class: 'fab fa-css3-alt',
-      description: 'git'
+      description: 'CSS'
    },
    {
       color: '#cc6699',
       class: 'fab fa-sass',
-      description: 'git'
+      description: 'SASS'
    },
 ]
 const MySkills = () => {
@@ -45,6 +45,7 @@ const MySkills = () => {
                   return (
                      <div>
                         <i style={{ color: icon.color }} class={icon.class}></i>
+                        <p>{icon.description}</p>
                      </div>
                   )
                })}

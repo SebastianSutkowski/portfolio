@@ -9,7 +9,18 @@ import Home from './Home/Home';
 import AboutMe from './AboutMe/AboutMe';
 import MyWorks from './MyWorks/MyWorks';
 import MySkills from './MySkills/MySkills';
-
+import Contact from './Contact/Contact';
+import styled from 'styled-components';
+const Footer = styled.footer`
+background-color:  ${props => props.theme.colors.blue.dark};
+padding:10px 0;
+color:white;
+text-align:center;
+a{
+  color:#ddd;
+  text-decoration:none;
+}
+`
 function App() {
   return (
     <ThemeProvider theme={normalizedStyles}>
@@ -18,9 +29,11 @@ function App() {
       <AboutMe />
       <MyWorks />
       <MySkills />
-      <footer>
-
-      </footer>
+      <Contact />
+      <Footer>
+        Copyrights © 2020
+      <a href="https://github.com/sebo9611" target="_blank"> Sebastian Sutkowski</a>
+      </Footer>
     </ThemeProvider>
 
 
