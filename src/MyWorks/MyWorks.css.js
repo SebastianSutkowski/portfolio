@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 export const Works = styled.article`
-margin-top: 5vw;
+padding-top: 5vw;
 // background-color: rgba(238, 238, 238, 0.562);
+position: relative;
 header{
    text-align: center;
    h1{
@@ -35,7 +36,7 @@ section{
          position: absolute;
          top:0;
          left:0;
-         transition: .3s;
+         transition: .5s;
          opacity:0;
          clip-path:circle(5% at 100% 0%);
          p{
@@ -54,7 +55,6 @@ section{
             color:white;
             border:none;
             border-radius:10px;
-            transition:.3s;
             cursor:pointer;
          }
          button:nth-of-type(1){
