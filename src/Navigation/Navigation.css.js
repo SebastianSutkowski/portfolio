@@ -50,6 +50,7 @@ export const Navpanel = styled.nav`
     margin: 15px 10vw;
   }
   section:nth-of-type(2) {
+    position: absolute;
     margin-left: 100vw;
     transition: 0.3s;
     ul {

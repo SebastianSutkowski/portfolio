@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Navpanel } from "./Navigation.css";
 // import './Nav.scss'
-import { Works } from "../MyWorks/MyWorks.css";
 import { Main } from "../Home/Home.css";
 import { About } from "../AboutMe/AboutMe.css";
 import { Skills } from "../MySkills/MySkills.css";
 import { ContactSection } from "../Contact/Contact.css";
 
-const Navigation = (props) => {
+const Navigation = () => {
   // console.log(props)
-  const [scrollY, setScrollY] = useState(0);
-  const [open, setOpen] = useState(false);
+  // const [scrollY, setScrollY] = useState(0);
+  const [open, setOpen] = useState(true);
   function logit() {
-    setScrollY(window.pageYOffset);
-
+    // setScrollY(window.pageYOffset);
     if (window.scrollY > 100) {
       document.querySelector(
         "nav"
@@ -35,7 +33,7 @@ const Navigation = (props) => {
   function handleNavClick(pos) {
     const classOfMain = (<Main />).type.styledComponentId;
     const classOfAbout = (<About />).type.styledComponentId;
-    const classOfWorks = (<Works />).type.styledComponentId;
+    // const classOfWorks = (<Works />).type.styledComponentId;
     const classOfSkills = (<Skills />).type.styledComponentId;
     const classOfContactSection = (<ContactSection />).type.styledComponentId;
     const aboutPosition =
@@ -48,7 +46,7 @@ const Navigation = (props) => {
       document.querySelector(`.${classOfContactSection}`).offsetTop - 60;
     const arr = [
       {
-        name: "0",
+        name: 0,
         value: 0,
       },
       {
@@ -69,9 +67,8 @@ const Navigation = (props) => {
       },
     ];
     arr.map((section) => {
-      if (pos == section.name) {
-        window.scrollTo(0, section.value);
-        console.log(section);
+      if (pos === section.name) {
+        return window.scrollTo(0, section.value);
       }
     });
   }
