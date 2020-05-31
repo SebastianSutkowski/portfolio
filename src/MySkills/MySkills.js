@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Skills } from "./MySkills.css";
 import svgSkills from "../img/svgSkills.svg";
 const icons = [
@@ -34,8 +34,28 @@ const icons = [
   },
 ];
 const MySkills = () => {
+  useEffect(() => {
+    console.log(show);
+    function watchScroll() {
+      window.addEventListener("scroll", logit);
+    }
+    watchScroll();
+    return () => {
+      window.removeEventListener("scroll", logit);
+    };
+  });
+  const [show, setShow] = useState(false);
+  function logit() {
+    const classOfSkills = (<Skills />).type.styledComponentId;
+    const vh = window.innerHeight;
+    const skillsPosition =
+      document.querySelector(`.${classOfSkills}`).offsetTop - 0.8 * vh;
+    if (window.scrollY > skillsPosition) {
+      setShow(true);
+    }
+  }
   return (
-    <Skills>
+    <Skills show={show}>
       <header>
         <h1>My Skills</h1>
       </header>

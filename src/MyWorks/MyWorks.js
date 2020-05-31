@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 // import './MyWorks.scss'
 import { Works } from "./MyWorks.css";
 import medyk from "../img/medyk.PNG";
@@ -26,8 +26,27 @@ const Porjects = [
   },
 ];
 const MyWorks = () => {
+  useEffect(() => {
+    function watchScroll() {
+      window.addEventListener("scroll", logit);
+    }
+    watchScroll();
+    return () => {
+      window.removeEventListener("scroll", logit);
+    };
+  });
+  const [show, setShow] = useState(false);
+  function logit() {
+    const classOfWorks = (<Works />).type.styledComponentId;
+    const vh = window.innerHeight;
+    const worksPosition =
+      document.querySelector(`.${classOfWorks}`).offsetTop - 0.8 * vh;
+    if (window.scrollY > worksPosition) {
+      setShow(true);
+    }
+  }
   return (
-    <Works>
+    <Works show={show}>
       <header>
         <h1>My Works</h1>
       </header>

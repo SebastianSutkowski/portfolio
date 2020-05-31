@@ -10,6 +10,10 @@ export const Works = styled.article`
       width: auto;
       font-weight: 600;
       color: ${(props) => props.theme.colors.blue.dark};
+      opacity: ${({ show }) => (show ? `1` : "0")};
+      transition: 0.5s;
+      transform: ${({ show }) =>
+        show ? `translate(0, 0)` : "translate(0, -10vh)"};
     }
   }
   section {
@@ -17,6 +21,10 @@ export const Works = styled.article`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    opacity: ${({ show }) => (show ? `1` : "0")};
+    transition: 0.5s;
+    transform: ${({ show }) =>
+      show ? `translate(0, 0)` : "translate(0, 10vh)"};
     div {
       box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.75);
       overflow: hidden;

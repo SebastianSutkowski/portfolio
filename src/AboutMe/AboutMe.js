@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 // import './AboutMe.scss'
 import svgAbout from "../img/svgAbout.svg";
 import { About } from "./AboutMe.css";
 const AboutMe = () => {
+  useEffect(() => {
+    function watchScroll() {
+      window.addEventListener("scroll", logit);
+    }
+    watchScroll();
+    return () => {
+      window.removeEventListener("scroll", logit);
+    };
+  });
+  const [show, setShow] = useState(false);
+  function logit() {
+    const classOfAbout = (<About />).type.styledComponentId;
+    const vh = window.innerHeight;
+    const aboutPosition =
+      document.querySelector(`.${classOfAbout}`).offsetTop - 0.8 * vh;
+    if (window.scrollY > aboutPosition) {
+      setShow(true);
+    }
+  }
   return (
-    <About>
+    <About show={show}>
       <header>
         <h1>About me</h1>
       </header>
