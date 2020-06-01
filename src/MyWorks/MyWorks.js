@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Works } from "./MyWorks.css";
 import medyk from "../img/medyk.PNG";
 import portfolio from "../img/portfolio.PNG";
+import to_do from "../img/to_do.PNG";
 
 const Porjects = [
   {
@@ -19,10 +20,10 @@ const Porjects = [
     live: "https://sebo9611.github.io/portfolio/",
   },
   {
-    img: medyk,
-    description: "comercial project realised for my sports-club",
-    repo: "https://github.com/sebo9611/portfolio",
-    live: "https://sebo9611.github.io/portfolio/",
+    img: to_do,
+    description: "Project realised while learning react",
+    repo: "https://github.com/sebo9611/to_do_react",
+    live: "https://sebo9611.github.io/to_do_react/",
   },
 ];
 const MyWorks = () => {

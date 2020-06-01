@@ -18,7 +18,7 @@ const Home = () => {
       {/* <article> */}
       <section>
         <h1>Sebastian Sutkowski</h1>
-        <h2>Front-end develoer</h2>
+        <h2>Front-end developer</h2>
         <h3>lets check my portfolio and hire me</h3>
         <Button pos={() => handleContactClick()} content={"contact me"} />
       </section>
