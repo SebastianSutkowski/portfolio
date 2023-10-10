@@ -6,7 +6,7 @@ This project is my own portfolio
 
 ### check live
 
-You can check [live](https://sebo9611.github.io/portfolio/) of project.
+You can check [live](https://SebastianSutkowski.github.io/portfolio/) of project.
 
 ### check repository
 
